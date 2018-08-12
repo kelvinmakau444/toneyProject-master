@@ -496,7 +496,7 @@ private String mFireBaseRegId;
                 String ResponseCode = object.getString("ResponseCode");
                 //todo: encrypt before saving to statics
                 MResponse.CheckoutRequestID= object.getString("CheckoutRequestID");
-                Toast.makeText(CheckoutActivity.this, MResponse.CheckoutRequestID, Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(CheckoutActivity.this, MResponse.CheckoutRequestID, Toast.LENGTH_SHORT).show();
                     if(ResponseCode.equals("0") && responseDescription.contains("Success. Request accepted for processing")){
                         //it opened sim toolkit so tutume resp kwa callback url to see if he actually paid
 
@@ -535,7 +535,7 @@ Log.d("CCCC: ",response);
    JSONObject body = jsonObject.getJSONObject("Body");
    JSONObject stkCallback= body.getJSONObject("stkCallback");
    String CODE= stkCallback.getString("ResultCode");
-   Toasty.error(CheckoutActivity.this,CODE,Toast.LENGTH_LONG).show();
+   //Toasty.error(CheckoutActivity.this,CODE,Toast.LENGTH_LONG).show();
 if(CODE.trim().equals("0")){
     pdd
             .setTitleText("Order Successfull!")
